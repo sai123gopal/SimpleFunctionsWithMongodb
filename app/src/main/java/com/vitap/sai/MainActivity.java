@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         Realm.init(this);
         App app =new App(new AppConfiguration.Builder("Your app id here").build());
 
-        String email = "sai.gopalsai143@gmail.com";
-        String pass = "Sai123gopal";
+        String email = "@email.com";
+        String pass = "password";
 
         Credentials anonymousCredentials = Credentials.emailPassword(email,pass);
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
                 user1 = app.currentUser();
                 mongoClient = user1.getMongoClient("mongodb-atlas");
-                mongoDatabase = mongoClient.getDatabase("Alumin");
+                mongoDatabase = mongoClient.getDatabase("Database name");
                 mongoCollection = mongoDatabase.getCollection("users");
 
 
@@ -82,8 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         mongoCollection.insertOne(new Document("_id",user1.getId())
                 .append("gender","male").append("userid","0001")
-                .append("email","sai123gopal@gmail.com")
-                .append("Reg no","18mis7013")
+                .append("email","email")
                 .append("name","sai gopal")
                 .append("phone num",number)
                 .append("created at",new Date())
