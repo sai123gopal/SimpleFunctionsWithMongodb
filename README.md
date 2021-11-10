@@ -1,6 +1,8 @@
 # SimpleFunctionsWithMongodb 
 
-Android app : simple functions using monogdb database like  Authentication, InsertData, Update, Find, Delete.
+Android app : simple functions using monogdb database like  Authentication.
+
+Insert, Update, Find, Delete.
 
 
 ## insertOne();
